@@ -1,0 +1,416 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+    sans-serif;
+  background-color: black;
+  color: white;
+}
+
+header {
+  padding: 1.5rem 8.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo svg {
+  width: 9.25rem;
+  height: 2.5rem;
+  color: rgb(229, 9, 20);
+  fill: currentColor;
+  display: block;
+}
+
+.sign-btn {
+  border: 0;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  height: 2rem;
+  padding: 0.25rem 1rem;
+  border-radius: 0.25rem;
+  background: rgb(229, 9, 20);
+  color: white;
+}
+
+.sign-btn:hover {
+  background: rgb(177, 15, 15);
+}
+
+.hero {
+  position: relative;
+  height: 93vh;
+  background: url("/public/hero-image.jpg") center/cover no-repeat;
+  margin: -3.4rem auto 0 auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2rem 2rem 2rem;
+  position: relative;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.startat {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+p {
+  margin-bottom: 1.4rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 40%;
+  gap: 0.5rem;
+}
+
+input {
+  border: 1px solid gray;
+  font-size: 1rem;
+  width: 100%;
+  padding: 1.45rem 1rem 0.5rem;
+  background-color: transparent;
+  color: white;
+}
+
+.get-btn {
+  border: 0;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 500;
+  height: 3.25rem;
+  width: 330px;
+  padding: 0.5rem 0;
+  border-radius: 0.25rem;
+  background: rgb(229, 9, 20);
+  color: white;
+}
+
+.get-btn:hover {
+  background: rgb(177, 15, 15);
+}
+
+.curve-container {
+  position: absolute;
+  width: 100%;
+  height: 55px;
+  border-radius: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(184, 40, 105, 1),
+    rgba(229, 9, 20, 1),
+    rgba(184, 40, 105, 1)
+  );
+  bottom: -220px;
+  left: 0;
+}
+
+.inner-curve2 {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  border-radius: 40%;
+  background: linear-gradient(
+    to bottom,
+    rgba(14, 11, 206, 0.327),
+    rgb(0, 0, 0)
+  );
+  bottom: -3px;
+  left: 0;
+}
+
+.inner-curve1 {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  border-radius: 40%;
+  background: rgba(0, 0, 0, 0.859);
+  bottom: -3px;
+  left: 0;
+}
+
+.section {
+  margin-top: 65px;
+  padding: 0 8rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.trend-container {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  max-width: 1160px;
+  padding-bottom: 1rem;
+}
+
+.trend-card {
+  position: relative;
+}
+
+.trend-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+
+.trend-card img {
+  border-radius: 0.5rem;
+}
+
+.card-no {
+  position: absolute;
+  bottom: 6px;
+  left: -24px;
+  font-size: 6rem;
+  font-weight: 700;
+  content: attr(data-content);
+  -webkit-text-fill-color: rgb(0, 0, 0);
+  -webkit-text-stroke: 1px;
+}
+
+.join-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1.4rem;
+  padding-bottom: 1rem;
+}
+
+.join-card {
+  position: relative;
+  height: 280px;
+  width: 300px;
+  padding: 1.3rem;
+  background: linear-gradient(to bottom, #1a2042, #210f19);
+  border-radius: 1rem;
+}
+
+.join-card p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #b3b3bc;
+}
+
+.join-card svg {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+}
+
+.faq-question {
+  width: 100%;
+  background-color: rgb(45, 45, 45);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  margin-bottom: 5px;
+}
+
+.faq-question:hover {
+  background-color: rgb(60, 60, 60);
+}
+
+.faq-question p {
+  font-size: 1.5rem;
+}
+
+.faq-question span {
+  font-size: 2.4rem;
+  margin-top: -22px;
+}
+
+.faq-ans {
+  padding: 14px 30px;
+  font-size: 1.5rem;
+  background-color: rgb(45, 45, 45);
+}
+
+.membership {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.footer a {
+  color: #b3b3bc;
+  text-decoration-color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-cols {
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: row;
+  gap: 10rem;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.footer select {
+  background-color: transparent;
+  color: #b3b3bc;
+  border: 1px solid #b3b3bc;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.footer p {
+  margin-top: 1.75rem;
+  font-size: 1rem;
+  color: #b3b3bc;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 1rem;
+  }
+
+  .header-container {
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .logo svg {
+    width: 6rem;
+    height: auto;
+  }
+
+  .hero {
+    height: 80vh;
+    background-size: cover;
+    padding: 2rem 1rem;
+  }
+
+  .hero-content {
+    top: 45%;
+    transform: translateY(-50%);
+    padding: 0 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .startat {
+    font-size: 1.1rem;
+  }
+
+  .input-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  input {
+    padding: 1rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .get-btn {
+    font-size: 1.2rem;
+    width: 100%;
+    height: auto;
+    padding: 0.8rem;
+  }
+
+  .section {
+    padding: 0 1rem;
+  }
+
+  .curve-container {
+    bottom: -185px;
+  }
+
+  .trend-container,
+  .join-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .trend-card img,
+  .join-card {
+    width: 80%;
+  }
+
+  .card-no {
+    font-size: 4.5rem;
+    left: -18px;
+  }
+
+  .join-card {
+    height: 280px;
+  }
+
+  .faq-question {
+    padding: 15px;
+  }
+
+  .faq-question p {
+    font-size: 1.2rem;
+  }
+
+  .faq-ans {
+    font-size: 1.2rem;
+  }
+
+  .faq-question span {
+    font-size: 1.8rem;
+  }
+
+  .footer-cols {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
